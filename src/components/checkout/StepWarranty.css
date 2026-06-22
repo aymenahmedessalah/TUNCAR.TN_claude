@@ -1,0 +1,163 @@
+.warranty-card {
+  text-align: center;
+}
+
+.warranty-card__check {
+  color: var(--cyber-green);
+}
+
+.warranty-card__title {
+  color: var(--cyber-green);
+  margin-top: 5px;
+  font-size: 22px;
+}
+
+.warranty-card__started {
+  color: var(--cyber-amber);
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin: 25px 0;
+  flex-wrap: wrap;
+}
+
+.countdown__block {
+  background: linear-gradient(135deg, var(--primary-dark), #030712);
+  border: 2px solid var(--border-blue);
+  border-radius: 12px;
+  padding: 14px;
+  min-width: 76px;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0, 242, 254, 0.1);
+}
+
+.countdown__num {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--cyber-blue);
+  font-family: var(--font-mono);
+  text-shadow: 0 0 10px rgba(0, 242, 254, 0.4);
+}
+
+.countdown__label {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 4px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.warranty-card__playback-section {
+  border-top: 1px dashed var(--border-blue);
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+.warranty-card__playback-section h4 {
+  margin: 0 0 10px;
+  color: #fff;
+  font-size: 15px;
+}
+
+.media-playback {
+  border: 1px solid var(--border-blue);
+  border-radius: 12px;
+  overflow: hidden;
+  background: #000;
+  margin: 0 auto 15px;
+  max-width: 460px;
+  min-height: 60px;
+}
+
+.media-playback video {
+  width: 100%;
+  display: block;
+  max-height: 260px;
+  object-fit: contain;
+}
+
+.warranty-card__review-label {
+  font-size: 13px;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.verification-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.badge--pending {
+  background: rgba(255, 184, 0, 0.1);
+  border: 1px solid var(--cyber-amber);
+  color: var(--cyber-amber);
+}
+.badge--verified {
+  background: rgba(5, 255, 197, 0.1);
+  border: 1px solid var(--cyber-green);
+  color: var(--cyber-green);
+}
+.badge--unclear {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--cyber-red);
+  color: var(--cyber-red);
+}
+
+.warranty-card__review-note {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-top: 10px;
+  max-width: 480px;
+  margin-inline: auto;
+}
+
+.admin-simulator {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+.admin-simulator__title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 11px;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.admin-simulator__buttons {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.admin-simulator__btn {
+  width: auto;
+  font-size: 11px;
+  padding: 8px 14px;
+}
+
+.admin-simulator__btn--danger {
+  background: var(--cyber-red);
+  color: #fff;
+}

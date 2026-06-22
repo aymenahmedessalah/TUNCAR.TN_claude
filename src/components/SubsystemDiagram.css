@@ -1,0 +1,95 @@
+.subsystem-diagram {
+  display: flex;
+  background: #04070d;
+  border-radius: 16px;
+  border: 1px solid var(--border-blue);
+  overflow: hidden;
+  margin: 30px auto;
+  max-width: 850px;
+  height: 280px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.subsystem-diagram__sidebar {
+  width: 220px;
+  background: #060912;
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border-inline-end: 1px solid var(--border-blue);
+  justify-content: center;
+  gap: 4px;
+}
+
+.subsystem-diagram__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  border: none;
+  border-inline-start: 3px solid transparent;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-dim);
+  cursor: pointer;
+  text-align: start;
+  transition: all 0.25s ease;
+}
+
+.subsystem-diagram__item:hover {
+  color: var(--text-light);
+}
+
+.subsystem-diagram__item.is-selected {
+  color: var(--system-color);
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.03);
+  border-inline-start-color: var(--system-color);
+}
+
+.subsystem-diagram__svg-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background: #020408;
+}
+
+.subsystem-diagram__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.subsystem-group rect,
+.subsystem-group path,
+.subsystem-group polygon {
+  stroke: var(--system-color);
+  stroke-width: 1.5;
+  fill: transparent;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.subsystem-group text {
+  font-size: 11px;
+  font-weight: 700;
+  fill: var(--system-color);
+  pointer-events: none;
+}
+
+.subsystem-group:hover rect,
+.subsystem-group:hover path,
+.subsystem-group:hover polygon {
+  stroke-width: 2.5;
+  filter: drop-shadow(0 0 6px var(--cyber-blue));
+}
+
+.subsystem-group.is-selected rect,
+.subsystem-group.is-selected path,
+.subsystem-group.is-selected polygon {
+  fill: rgba(0, 242, 254, 0.12);
+  stroke: var(--cyber-blue);
+  filter: drop-shadow(0 0 8px rgba(0, 242, 254, 0.3));
+}

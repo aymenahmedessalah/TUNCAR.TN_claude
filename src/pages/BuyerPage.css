@@ -1,0 +1,47 @@
+.buyer-selection__hero {
+  text-align: center;
+  background: radial-gradient(circle at 50% 50%, #0d1b3e 0%, transparent 70%);
+  padding-bottom: 10px;
+}
+
+.buyer-selection__hero h1 {
+  font-size: 28px;
+  margin-bottom: 6px;
+}
+
+.buyer-selection__hero p {
+  color: var(--text-muted);
+  margin-bottom: 30px;
+  font-size: 14px;
+  max-width: 560px;
+  margin-inline: auto;
+}
+
+.buyer-browse__change-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin: 16px auto 30px;
+  background: transparent;
+  border: 1px solid var(--border-blue);
+  color: var(--text-muted);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.buyer-browse__change-btn svg {
+  transform: rotate(180deg);
+}
+
+html[dir="ltr"] .buyer-browse__change-btn svg {
+  transform: none;
+}
+
+.buyer-browse__change-btn:hover {
+  border-color: var(--cyber-blue);
+  color: var(--cyber-blue);
+}

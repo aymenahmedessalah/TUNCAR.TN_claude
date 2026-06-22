@@ -1,0 +1,33 @@
+.payment-gateway {
+  background: #fff;
+  color: #111;
+  border-radius: 12px;
+  padding: 22px;
+  text-align: center;
+  margin: 6px 0 18px;
+  border: 2px solid #0056b3;
+}
+
+.payment-gateway__logo {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-style: italic;
+  color: #0056b3;
+  font-size: 20px;
+}
+
+.payment-gateway__note {
+  font-size: 13px;
+  color: #555;
+  margin: 10px 0 16px;
+}
+
+.payment-gateway .checkout-form-group label {
+  color: #333;
+}
+
+.payment-gateway__input {
+  background: #f1f5f9 !important;
+  color: #000 !important;
+  border-color: #cbd5e1 !important;
+}

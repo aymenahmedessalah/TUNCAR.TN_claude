@@ -1,0 +1,141 @@
+/* ==========================================================================
+   GLOBAL DESIGN TOKENS
+   These CSS variables are the single source of truth for the TUNCAR brand.
+   Every component pulls its colors from here — change a value once,
+   and it updates everywhere across the platform.
+   ========================================================================== */
+:root {
+  /* Surface colors */
+  --bg-main: #030712;
+  --bg-card: #0f172a;
+  --primary-dark: #0b1329;
+  --border-blue: #1f3a60;
+
+  /* Brand accents */
+  --cyber-blue: #00f2fe;
+  --cyber-green: #05ffc5;
+  --cyber-amber: #ffb800;
+  --cyber-red: #ef4444;
+
+  /* Text */
+  --text-light: #f3f4f6;
+  --text-muted: #94a3b8;
+  --text-dim: #64748b;
+
+  /* Typography */
+  --font-display: "Rajdhani", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Shape & motion */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-display);
+  margin: 0;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  font-family: var(--font-display);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Visible keyboard focus ring across the platform (accessibility) */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--cyber-blue);
+  outline-offset: 2px;
+}
+
+/* Hide scrollbars on horizontally-scrolling rails while keeping them usable */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.35s ease;
+}
+
+/* ==========================================================================
+   SHARED PAGE LAYOUT
+   Used by the root Layout component that wraps every route.
+   ========================================================================== */
+.app-main {
+  padding: 95px 20px 60px;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: calc(100vh - 160px);
+}
+
+.site-footer {
+  text-align: center;
+  padding: 25px;
+  background: var(--primary-dark);
+  border-top: 1px solid var(--border-blue);
+  font-size: 12px;
+  color: #6b7280;
+}

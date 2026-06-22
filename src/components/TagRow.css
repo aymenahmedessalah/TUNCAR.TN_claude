@@ -1,0 +1,63 @@
+.vehicle-flow-panel {
+  max-width: 850px;
+  margin: 40px auto 30px;
+  padding: 30px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-blue);
+  border-radius: var(--radius-lg);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.tag-row {
+  border-bottom: 1px solid rgba(31, 58, 96, 0.4);
+  padding-bottom: 20px;
+}
+
+.tag-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.tag-row__title {
+  font-size: 14px;
+  color: var(--cyber-blue);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.tag-row__list {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 8px 5px;
+}
+
+.tag-pill {
+  padding: 10px 20px;
+  background: var(--primary-dark);
+  border: 1px solid var(--border-blue);
+  color: #d1d5db;
+  border-radius: 30px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.tag-pill:hover {
+  border-color: var(--cyber-blue);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.tag-pill.is-active {
+  background: rgba(5, 255, 197, 0.1);
+  border-color: var(--cyber-green);
+  color: var(--cyber-green);
+  box-shadow: 0 0 15px rgba(5, 255, 197, 0.2);
+  font-weight: 700;
+}
